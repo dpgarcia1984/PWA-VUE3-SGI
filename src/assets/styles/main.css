@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --success-color: #4cc9f0;
+  --info-color: #4895ef;
+  --warning-color: #f72585;
+  --danger-color: #e63946;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 280px;
+  padding: 20px;
+  transition: all 0.3s;
+  padding-bottom: 20px;
+}
+
+.content.expanded {
+  margin-left: 0;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.table {
+  background-color: #fff;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+  .content.active {
+    margin-left: 280px;
+  }
+}
+</style>
